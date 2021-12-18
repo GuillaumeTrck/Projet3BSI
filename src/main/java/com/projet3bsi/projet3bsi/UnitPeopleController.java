@@ -13,4 +13,8 @@ public class UnitPeopleController {
     public void WTFct1(){
 
     }
+    public void functionFromWtDesktop () {
+
+    }
+
 }
