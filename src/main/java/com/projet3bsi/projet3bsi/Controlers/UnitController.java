@@ -1,14 +1,13 @@
-package com.projet3bsi.projet3bsi;
+package com.projet3bsi.projet3bsi.Controlers;
 
+import com.projet3bsi.projet3bsi.CareApplication;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
 import javafx.stage.Window;
@@ -68,6 +67,7 @@ public class UnitController {
                 });
 
     }
+
 
 
 

@@ -7,11 +7,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Button?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.projet3bsi.projet3bsi.UnitPeopleController"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <Button id="test"/>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="com.projet3bsi.projet3bsi.Controlers.PatientsOverviewController">
+   <children>
+   
+       <Button id="test" fx:id="BtnReturn" onAction="#OnBtnReturnClick" prefHeight="51.0" prefWidth="145.0" text="Return" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+      <Label fx:id="firstNameLabel" text="First Name " AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="0.0" />
+      <Label fx:id="lastNameLabel" layoutX="1.0" layoutY="35.0" text="Last Name " AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="35.0" />
+      <Label fx:id="streetLabel" layoutX="1.0" layoutY="70.0" text="Street" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="70.0" />
+      <Label fx:id="postalCodeLabel" layoutX="-2.0" layoutY="105.0" text="Postal Code " AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="105.0" />
+      <Label fx:id="cityLabel" layoutY="140.0" text="City" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="140.0" />
+      <Label fx:id="birthdayLabel" layoutX="1.0" layoutY="175.0" text="Birthday" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="175.0" />
+   </children>
 
 </AnchorPane>
