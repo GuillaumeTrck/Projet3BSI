@@ -10,6 +10,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
+import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -58,17 +59,20 @@ public class UnitController {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+                        // get controller associated with the view
+                        UnitPeopleController unitPeopleController = fxmlUnitPeople.getController();
+                        // set the current unit care
+                        unitPeopleController.setListView(newValue);
 
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                         mainWindow = (Stage) Window.getWindows().get(0);
                         mainWindow.setScene(scene); //here we simply set the new scene
 
                     }
+
                 });
 
     }
-
-
 
 
 }

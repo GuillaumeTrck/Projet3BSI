@@ -25,24 +25,6 @@ public class CareApplication extends Application {
 
     }
 
-    private ObservableList<Patients> patientsData = FXCollections.observableArrayList();
-
-    public CareApplication() {
-        patientsData.add(new Patients("Guillaume", "Tricknot"));
-        patientsData.add(new Patients("Théo", "Desoil"));
-        patientsData.add(new Patients("Noemia", "Addamo"));
-        patientsData.add(new Patients("Claudia", "Sedeck"));
-        patientsData.add(new Patients("Julien", "Ponsart"));
-        patientsData.add(new Patients("Simond", "Dubuisson"));
-        patientsData.add(new Patients("Akcel", "korcer"));
-        patientsData.add(new Patients("Manon", "Poiret"));
-        patientsData.add(new Patients("Martin", "Bonnet"));
-    }
-
-    public ObservableList<Patients> getPatientsData() {
-        return patientsData;
-    }
-
 
     public static void main(String[] args) {
         launch();
