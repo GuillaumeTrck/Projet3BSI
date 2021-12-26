@@ -1,6 +1,7 @@
 package com.projet3bsi.projet3bsi.Controlers;
 
 import com.projet3bsi.projet3bsi.CareApplication;
+import com.projet3bsi.projet3bsi.Models.UnitCare;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -35,11 +36,10 @@ public class UnitController {
 
     public void setListView()
     {
-        stringSet = new HashSet<>();
-        stringSet.add("Urgences");
-        stringSet.add("Pédiatrie");
-        stringSet.add("Oncologie");
-        observableList.setAll(stringSet);
+        UnitCare unitCare = new UnitCare();
+        HashSet<String> unitCareList = unitCare.getUnitCares();
+
+        observableList.setAll(unitCareList);
         listView.setItems(observableList);
 
         // initialisation de l'écouteur du changement d'élément de la liste
