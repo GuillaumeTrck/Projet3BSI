@@ -10,7 +10,7 @@
 <AnchorPane prefHeight="269.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projet3bsi.projet3bsi.Controlers.PatientsOverviewController">
    <children>
    
-       <Button id="test" fx:id="BtnReturn" onAction="#OnBtnReturnClick" prefHeight="26.0" prefWidth="61.0" text="Return" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+       <Button id="test" fx:id="BtnReturn" onAction="#OnBtnReturnClick" prefHeight="26.0" prefWidth="61.0" text="Return" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="20.0" />
       <Label fx:id="firstNameLabel" text="First Name " AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="0.0" />
       <Label fx:id="lastNameLabel" layoutX="1.0" layoutY="35.0" text="Last Name " AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="35.0" />
       <Label fx:id="streetLabel" layoutX="1.0" layoutY="70.0" text="Street" AnchorPane.leftAnchor="1.0" AnchorPane.topAnchor="70.0" />

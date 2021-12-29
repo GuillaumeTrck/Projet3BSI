@@ -61,7 +61,8 @@ public class PatientsOverviewController {
 
 
         public void OnBtnReturnClick(ActionEvent actionEvent) {
-                FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-view.fxml"));
+
+                FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
 
                 Scene scene = null;
                 try {
@@ -69,6 +70,7 @@ public class PatientsOverviewController {
                 } catch (IOException e) {
                         e.printStackTrace();
                 }
+
 
                 Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                 mainWindow = (Stage) Window.getWindows().get(0);

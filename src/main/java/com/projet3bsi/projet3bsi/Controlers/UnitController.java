@@ -64,9 +64,12 @@ public class UnitController {
                         // set the current unit care
                         unitPeopleController.setListView(newValue);
 
+
+
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                         mainWindow = (Stage) Window.getWindows().get(0);
                         mainWindow.setScene(scene); //here we simply set the new scene
+
 
                     }
 
