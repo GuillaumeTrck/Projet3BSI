@@ -75,9 +75,9 @@ public class PatientsOverviewController {
                 }
 
                 // get controller associated with the view
-                UnitPeopleController unitPeopleController = fxmlUnitPeople.getController();
+                UnitPatientsController unitPatientsController = fxmlUnitPeople.getController();
                 // set the current unit care
-                unitPeopleController.setListView(currentUnitCare);
+                unitPatientsController.setListView(currentUnitCare);
 
                 Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                 mainWindow = (Stage) Window.getWindows().get(0);

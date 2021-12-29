@@ -10,7 +10,6 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.control.ListView;
-import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 
@@ -60,9 +59,9 @@ public class UnitController {
                             e.printStackTrace();
                         }
                         // get controller associated with the view
-                        UnitPeopleController unitPeopleController = fxmlUnitPeople.getController();
+                        UnitPatientsController unitPatientsController = fxmlUnitPeople.getController();
                         // set the current unit care
-                        unitPeopleController.setListView(newValue);
+                        unitPatientsController.setListView(newValue);
 
 
 

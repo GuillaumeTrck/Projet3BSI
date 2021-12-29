@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-public class UnitPeopleController {
+public class UnitPatientsController {
     @FXML
     private ListView<String> listView = new ListView<String>();
     private Set<String> stringSet;
@@ -31,7 +31,7 @@ public class UnitPeopleController {
     }
 
 
-    public UnitPeopleController()
+    public UnitPatientsController()
     {
 
     }
