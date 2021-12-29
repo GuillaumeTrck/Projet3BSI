@@ -62,6 +62,11 @@ public class UnitPeopleController {
                             e.printStackTrace();
                         }
 
+                        // get controller associated with the view
+                        PatientsOverviewController patientsOverviewController = fxmlUnitPeople.getController();
+                        // set the current unit care
+                        patientsOverviewController.SetCurrentUnitCare(currentUnitCare);
+
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                         mainWindow = (Stage) Window.getWindows().get(0);
                         mainWindow.setScene(scene); //here we simply set the new scene

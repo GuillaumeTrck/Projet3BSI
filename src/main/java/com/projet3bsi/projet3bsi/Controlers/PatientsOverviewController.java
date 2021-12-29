@@ -62,6 +62,9 @@ public class PatientsOverviewController {
 
         public void OnBtnReturnClick(ActionEvent actionEvent) {
 
+//                Scene scene = new Scene();
+//                scene.changed;
+
                 FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
 
                 Scene scene = null;
@@ -71,11 +74,21 @@ public class PatientsOverviewController {
                         e.printStackTrace();
                 }
 
+                // get controller associated with the view
+                UnitPeopleController unitPeopleController = fxmlUnitPeople.getController();
+                // set the current unit care
+                unitPeopleController.setListView(currentUnitCare);
 
                 Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                 mainWindow = (Stage) Window.getWindows().get(0);
                 mainWindow.setScene(scene); //here we simply set the new scene
 
         }
+        private String currentUnitCare;
+        public void SetCurrentUnitCare(String unitCare){
+                currentUnitCare = unitCare;
+        }
+
+
 
 }

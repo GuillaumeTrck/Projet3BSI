@@ -30,26 +30,4 @@ public class CareApplication extends Application {
         launch();
     }
 
-
-    public void showPatientsOverview() {
-        try {
-            FXMLLoader loader = new FXMLLoader();
-            loader.setLocation(CareApplication.class.getResource("view/PersonOverview.fxml"));
-            AnchorPane patientsOverview = (AnchorPane) loader.load();
-            //rootLayout.setCenter(patientsOverview);
-            PatientsOverviewController controller = loader.getController();
-            //controller.setCareApplication(this);
-            Scene scene = null;
-            scene = new Scene(patientsOverview, 320, 240);  //Revoir la taille avec scene builder
-
-            Stage mainWindow; //Here is the magic. We get the reference to main Stage.
-            mainWindow = (Stage) Window.getWindows().get(0);
-            mainWindow.setScene(scene); //here we simply set the new scene
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
-
-
 }
