@@ -55,12 +55,16 @@ public class UnitPatientsController {
                         System.out.println("Selected item: " + newValue);
                         FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("patients-overview-view.fxml"));
 
+
                         Scene scene = null;
+
                         try {
                             scene = new Scene(fxmlUnitPeople.load(), 320, 240);
+
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
+
 
                         // get controller associated with the view
                         PatientsOverviewController patientsOverviewController = fxmlUnitPeople.getController();
@@ -68,9 +72,12 @@ public class UnitPatientsController {
                         patientsOverviewController.SetCurrentUnitCare(currentUnitCare);
                         patientsOverviewController.setListView(newValue);
 
+
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                         mainWindow = (Stage) Window.getWindows().get(0);
                         mainWindow.setScene(scene); //here we simply set the new scene
+
+
 
                     }
                 });
