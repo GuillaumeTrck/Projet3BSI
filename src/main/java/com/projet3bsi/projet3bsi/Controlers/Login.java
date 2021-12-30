@@ -66,6 +66,8 @@ public class Login {
             mainWindow = (Stage) Window.getWindows().get(0);
             mainWindow.setScene(scene); //here we simply set the new scene
 
+            //bkazbhabzdjhbqjzhxb
+
         }
 
 
