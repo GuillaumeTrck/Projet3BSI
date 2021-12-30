@@ -1,7 +1,9 @@
 package com.projet3bsi.projet3bsi.Controlers;
 
 import com.projet3bsi.projet3bsi.CareApplication;
+import com.projet3bsi.projet3bsi.Models.Patients;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
@@ -18,6 +20,7 @@ import javafx.stage.Stage;
 import javafx.stage.Window;
 
 import java.io.IOException;
+import java.util.HashSet;
 
 
 public class Login {
@@ -53,7 +56,7 @@ public class Login {
 
             //Affichage
 
-            FXMLLoader fxmlLogin = new FXMLLoader(CareApplication.class.getResource("login.fxml"));
+            FXMLLoader fxmlLogin = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
 
             Scene scene = null;
             try {
@@ -62,24 +65,39 @@ public class Login {
                 e.printStackTrace();
             }
 
+
+            // get controller associated with the view
+            UnitPatientsController unitPatientsController = fxmlLogin.getController();
+            // set the current unit care
+            unitPatientsController.setListView(currentUnitCare);
+
             Stage mainWindow; //Here is the magic. We get the reference to main Stage.
             mainWindow = (Stage) Window.getWindows().get(0);
             mainWindow.setScene(scene); //here we simply set the new scene
 
-            //bkazbhabzdjhbqjzhxb
+
 
         }
 
+    }
 
+    public void OnButonClick(ActionEvent actionEvent) {
+        FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
 
-
-
-
-
-
-
-        public static void main(String[] args) {
-            launch(args);
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlUnitPeople.load(), 320, 240);
+        } catch (IOException e) {
+            e.printStackTrace();
         }
+
+        Stage mainWindow; //Here is the magic. We get the reference to main Stage.
+        mainWindow = (Stage) Window.getWindows().get(0);
+        mainWindow.setScene(scene); //here we simply set the new scene
+    }
+
+    private static String currentUnitCare;
+    public void SetCurrentUnitCare(String unitCare){
+        currentUnitCare = unitCare;
     }
 }
