@@ -1,29 +1,16 @@
 package com.projet3bsi.projet3bsi.Controlers;
 
 import com.projet3bsi.projet3bsi.CareApplication;
-import com.projet3bsi.projet3bsi.Models.Patients;
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.VBox;
-import javafx.scene.text.Font;
-import javafx.scene.text.FontWeight;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Objects;
-
 
 public class LoginController {
     static String pwdFieldR = "20";
