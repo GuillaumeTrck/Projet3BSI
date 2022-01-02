@@ -1,8 +1,10 @@
 package com.projet3bsi.projet3bsi.Models;
 
+import com.projet3bsi.projet3bsi.Interfaces.IUnitPeople;
+
 import java.util.HashSet;
 
-public class UnitPeople {
+public class UnitPeople implements IUnitPeople {
     private HashSet<String> unitPeople;
 
     /* Constructor */
@@ -30,7 +32,7 @@ public class UnitPeople {
     }
 
     /* methods */
-    public HashSet<String> getUnitPeople(){
-        return unitPeople;
-    }
+    public HashSet<String> getUnitPeople(){return unitPeople;}
+
+
 }

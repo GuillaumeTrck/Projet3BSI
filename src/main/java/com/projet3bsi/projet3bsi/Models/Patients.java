@@ -1,8 +1,10 @@
 package com.projet3bsi.projet3bsi.Models;
 
+import com.projet3bsi.projet3bsi.Interfaces.IPatients;
+
 import java.util.HashSet;
 
-public class Patients {
+public class Patients implements IPatients {
     private HashSet<String> patients;
 
     /* Constructor */
