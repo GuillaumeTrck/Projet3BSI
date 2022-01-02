@@ -50,19 +50,19 @@ public class UnitController {
                         // Your action here
 
                         System.out.println("Selected item: " + newValue);
-                        FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("Login.fxml"));
+                        FXMLLoader fxmlLogin= new FXMLLoader(CareApplication.class.getResource("Login.fxml"));
 
                         Scene scene = null;
                         try {
-                            scene = new Scene(fxmlUnitPeople.load(), 320, 240);
+                            scene = new Scene(fxmlLogin.load(), 320, 240);
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
 
-                        // get controller associated with the view
-                        //UnitPatientsController unitPatientsController = fxmlUnitPeople.getController();
-                        // set the current unit care
-                        //unitPatientsController.setListView(newValue);
+                         //get controller associated with the view
+                        LoginController loginController = fxmlLogin.getController();
+                         //set the current unit care
+                        loginController.SetCurrentUnitCare(newValue);
 
 
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.

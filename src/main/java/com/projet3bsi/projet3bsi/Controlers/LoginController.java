@@ -23,7 +23,7 @@ import java.io.IOException;
 import java.util.HashSet;
 
 
-public class Login {
+public class LoginController {
 
 
     public static class Main extends Application {
@@ -54,27 +54,6 @@ public class Login {
             gp.setVgap(10);
 
 
-            //Affichage
-
-            FXMLLoader fxmlLogin = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
-
-            Scene scene = null;
-            try {
-                scene = new Scene(fxmlLogin.load(), 320, 240);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-
-            // get controller associated with the view
-            UnitPatientsController unitPatientsController = fxmlLogin.getController();
-            // set the current unit care
-            unitPatientsController.setListView(currentUnitCare);
-
-            Stage mainWindow; //Here is the magic. We get the reference to main Stage.
-            mainWindow = (Stage) Window.getWindows().get(0);
-            mainWindow.setScene(scene); //here we simply set the new scene
-
 
 
         }
@@ -90,6 +69,10 @@ public class Login {
         } catch (IOException e) {
             e.printStackTrace();
         }
+        // get controller associated with the view
+        UnitPatientsController unitPatientsController = fxmlUnitPeople.getController();
+        // set the current unit care
+        unitPatientsController.setListView(currentUnitCare);
 
         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
         mainWindow = (Stage) Window.getWindows().get(0);
