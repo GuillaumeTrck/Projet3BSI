@@ -26,6 +26,21 @@ import java.util.HashSet;
 public class LoginController {
 
 
+    public void BtnReturnClick(ActionEvent actionEvent) {
+        FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-view.fxml"));
+
+        Scene scene = null;
+        try {
+            scene = new Scene(fxmlUnitPeople.load(), 320, 240);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        Stage mainWindow; //Here is the magic. We get the reference to main Stage.
+        mainWindow = (Stage) Window.getWindows().get(0);
+        mainWindow.setScene(scene); //here we simply set the new scene
+    }
+
     public static class Main extends Application {
 
         @Override
