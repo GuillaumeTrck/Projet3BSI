@@ -17,6 +17,11 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Crée l'objet observablelist ainsi qu'une ListView
+ * @author Guillaume
+ * @version  1.0
+ */
 public class UnitController {
     @FXML
     private ListView<String> listView = new ListView<String>();
@@ -34,6 +39,11 @@ public class UnitController {
 
     }
 
+    /**
+     * Permet de charger la liste des unités de soins
+     * @author Theo
+     * @version  1.0
+     */
     public void setListView()
     {
         UnitCare unitCare = new UnitCare();

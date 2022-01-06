@@ -8,7 +8,12 @@ import java.util.HashSet;
 public class Patients implements IPatients {
     private HashSet<String> patients;
 
-    /* Constructor */
+    /**
+     * Constructor
+     * @param currentPatient
+     * @author Theo
+     * @version  1.0
+     */
     public Patients (String currentPatient){
         patients = new HashSet<>();
         switch (currentPatient)
@@ -62,7 +67,12 @@ public class Patients implements IPatients {
 
     }
 
-    /* methods */
+    /**
+     * Méthode qui renvoie les données du patient sélectionné
+     * @return
+     * @author Theo
+     * @version  1.0
+     */
     public HashSet<String> getPatients(){
         return patients;
     }

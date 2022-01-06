@@ -11,7 +11,11 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.stage.Window;
 import java.io.IOException;
-
+/**
+ * Initialise le mot de passe et le username
+ * @author Theo
+ * @version  1.0
+ */
 public class LoginController {
     static String pwdFieldR = "20";
     static String userFieldR = "une note sur 20";
@@ -20,7 +24,13 @@ public class LoginController {
     @FXML
     private PasswordField pwdField;
 
-
+    /**
+     * Bouton retour en arrière
+     * @param actionEvent
+     *
+     * @author Theo
+     * @version  1.0
+     */
     public void BtnReturnClick(ActionEvent actionEvent) {
         FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-view.fxml"));
 
@@ -37,7 +47,11 @@ public class LoginController {
         mainWindow.setScene(scene); //here we simply set the new scene
     }
 
-
+    /**
+     * Charge la scène du Login
+     * @author Theo
+     * @version  1.0
+     */
     public static class Main extends Application {
 
         @Override
@@ -52,6 +66,12 @@ public class LoginController {
 
     }
 
+    /**
+     * Charge la scène suivante après s'être enregistré
+     * @param actionEvent
+     * @author Theo
+     * @version  1.0
+     */
     public void OnButonClick(ActionEvent actionEvent) {
         if(userField.getText().equals(userFieldR) && pwdField.getText().equals(pwdFieldR)){
             FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
