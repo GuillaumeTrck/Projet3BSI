@@ -18,7 +18,11 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
-
+/**
+ * Crée l'objet observablelist ainsi qu'une Listview
+ * @author Guillaume
+ * @version  1.0
+ */
 public class UnitPatientsController {
     @FXML
     private ListView<String> listView = new ListView<String>();
@@ -36,6 +40,13 @@ public class UnitPatientsController {
 
     }
 
+    /**
+     * Affiche la liste des différents patients du service sélectionné
+     * @param currentUnitCare
+     *
+     * @author Theo
+     * @version  1.0
+     */
     public void setListView(String currentUnitCare )
     {
 
@@ -85,6 +96,12 @@ public class UnitPatientsController {
 
     }
 
+    /**
+     * Bouton retour en arrière
+     * @param actionEvent
+     * @author Theo
+     * @version  1.0
+     */
     public void OnReturnClick(ActionEvent actionEvent) {
         FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-view.fxml"));
 

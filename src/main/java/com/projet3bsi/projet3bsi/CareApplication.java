@@ -13,6 +13,10 @@ import javafx.stage.Window;
 
 import java.io.IOException;
 
+/**
+ * Application principale
+ * Charge la scene principale
+ */
 public class CareApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException, Exception {

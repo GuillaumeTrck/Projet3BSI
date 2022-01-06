@@ -18,7 +18,7 @@ public class UnitPeopleTest
     }
 
     @org.junit.jupiter.api.Test
-    public void countUnitPeoplePédiatrie() {
+    public void countUnitPeoplePediatrie() {
         IUnitPeople unitPeople = new UnitPeople("Pédiatrie");
         HashSet<String> unitPeoples = unitPeople.getUnitPeople();
         assertEquals(4, unitPeoples.size() );

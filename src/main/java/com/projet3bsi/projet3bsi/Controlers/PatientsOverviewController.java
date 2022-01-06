@@ -18,6 +18,11 @@ import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Crée l'objet observablelist ainsi qu'une ListView
+ * @author Guillaume
+ * @version  1.0
+ */
 public class PatientsOverviewController {
         @FXML
         private ListView<String> listView = new ListView<String>();
@@ -35,6 +40,13 @@ public class PatientsOverviewController {
 
         }
 
+        /**
+         * Affiche les données du patient dans la fiche detail.
+         * @param currentPatient Patient sélectionné
+         *
+         * @author  Guillaume
+         * @version  1.0
+         */
         public void setListView(String currentPatient)
         {
 
@@ -59,15 +71,15 @@ public class PatientsOverviewController {
                                         } catch (IOException e) {
                                                 e.printStackTrace();
                                         }
-                                        // get controller associated with the view
+                                        // controller associé à la vue
                                         PatientsOverviewController patientsOverviewController = fxmlUnitPeople.getController();
-                                        // set the current unit care
+                                        // met en place l'unité sélectionnée
                                         patientsOverviewController.SetCurrentUnitCare(currentUnitCare);
 
-                                        Stage mainWindow; //Here is the magic. We get the reference to main Stage.
+                                        Stage mainWindow;
                                         mainWindow = (Stage) Window.getWindows().get(0);
                                         mainWindow.setTitle("Patient");
-                                        mainWindow.setScene(scene); //here we simply set the new scene
+                                        mainWindow.setScene(scene);
 
                                 }
                         });
@@ -75,8 +87,13 @@ public class PatientsOverviewController {
         }
 
 
-
-
+        /**
+         * Bouton retour en arrière
+         * @param actionEvent
+         *
+         * @author  Guillaume
+         * @version  1.0
+         */
         public void OnBtnReturnClick(ActionEvent actionEvent) {
 
                 FXMLLoader fxmlUnitPeople = new FXMLLoader(CareApplication.class.getResource("unit-people-view.fxml"));
@@ -88,15 +105,13 @@ public class PatientsOverviewController {
                         e.printStackTrace();
                 }
 
-                // get controller associated with the view
                 UnitPatientsController unitPatientsController = fxmlUnitPeople.getController();
-                // set the current unit care
                 unitPatientsController.setListView(currentUnitCare);
 
-                Stage mainWindow; //Here is the magic. We get the reference to main Stage.
+                Stage mainWindow;
                 mainWindow = (Stage) Window.getWindows().get(0);
                 mainWindow.setTitle("People");
-                mainWindow.setScene(scene); //here we simply set the new scene
+                mainWindow.setScene(scene);
 
         }
         private String currentUnitCare;

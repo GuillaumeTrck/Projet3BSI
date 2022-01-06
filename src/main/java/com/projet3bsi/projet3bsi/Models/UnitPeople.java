@@ -4,10 +4,16 @@ import com.projet3bsi.projet3bsi.Interfaces.IUnitPeople;
 
 import java.util.HashSet;
 
+
 public class UnitPeople implements IUnitPeople {
     private HashSet<String> unitPeople;
 
-    /* Constructor */
+    /**
+     * Constructor
+     * @param currentUnit
+     * @author Guillaume
+     * @version  1.0
+     */
     public UnitPeople (String currentUnit){
         unitPeople = new HashSet<>();
         switch (currentUnit)
@@ -31,7 +37,12 @@ public class UnitPeople implements IUnitPeople {
 
     }
 
-    /* methods */
+    /**
+     * Methode qui renvoie les différents patients en fonction de l'unité selectionné
+     * @return
+     * @author Guillaume
+     * @version  1.0
+     */
     public HashSet<String> getUnitPeople(){return unitPeople;}
 
 
