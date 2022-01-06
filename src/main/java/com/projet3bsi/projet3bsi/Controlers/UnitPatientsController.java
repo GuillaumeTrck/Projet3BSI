@@ -75,7 +75,7 @@ public class UnitPatientsController {
 
                         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
                         mainWindow = (Stage) Window.getWindows().get(0);
-                        mainWindow.setTitle("Patient");
+                        mainWindow.setTitle("Personal Data");
                         mainWindow.setScene(scene); //here we simply set the new scene
 
 
@@ -97,6 +97,7 @@ public class UnitPatientsController {
 
         Stage mainWindow; //Here is the magic. We get the reference to main Stage.
         mainWindow = (Stage) Window.getWindows().get(0);
+        mainWindow.setTitle("Unit");
         mainWindow.setScene(scene); //here we simply set the new scene
     }
 }
